@@ -51,7 +51,7 @@ export default function HeroSection() {
           {/* Platform CTAs */}
           <div className="flex flex-wrap gap-3 mb-8">
             <a
-              href="https://open.spotify.com/show/everydaydata"
+              href="https://open.spotify.com/show/0YoImym7yRsC6wGDxCrnRQ"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-spotify"
@@ -63,7 +63,7 @@ export default function HeroSection() {
               Listen on Spotify
             </a>
             <a
-              href="https://youtube.com/@everydatashow"
+              href="https://www.youtube.com/@EverydayDataWithPnZ"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-youtube"
@@ -75,7 +75,7 @@ export default function HeroSection() {
               Watch on YouTube
             </a>
             <a
-              href="https://podcasts.apple.com/us/podcast/everyday-data"
+              href="https://podcasts.apple.com/us/podcast/everyday-data-with-patricia-zac/id1874479161"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-apple"

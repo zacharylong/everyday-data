@@ -52,7 +52,7 @@ export default function MobileNav({ isOpen, links, onClose }: MobileNavProps) {
         </nav>
         <div className="pt-2 border-t border-border space-y-3">
           <a
-            href="https://open.spotify.com/show/everydaydata"
+            href="https://open.spotify.com/show/0YoImym7yRsC6wGDxCrnRQ"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-spotify w-full justify-center"
@@ -63,7 +63,7 @@ export default function MobileNav({ isOpen, links, onClose }: MobileNavProps) {
             Listen on Spotify
           </a>
           <a
-            href="https://youtube.com/@everydatashow"
+            href="https://www.youtube.com/@EverydayDataWithPnZ"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-youtube w-full justify-center"

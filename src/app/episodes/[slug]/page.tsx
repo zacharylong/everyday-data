@@ -299,7 +299,7 @@ export default async function EpisodeDetailPage({ params }: Props) {
                 </p>
                 <div className="space-y-2">
                   <a
-                    href="https://open.spotify.com/show/everydaydata"
+                    href="https://open.spotify.com/show/0YoImym7yRsC6wGDxCrnRQ"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-spotify text-xs w-full justify-center"
@@ -307,7 +307,7 @@ export default async function EpisodeDetailPage({ params }: Props) {
                     Follow on Spotify
                   </a>
                   <a
-                    href="https://youtube.com/@everydatashow"
+                    href="https://www.youtube.com/@EverydayDataWithPnZ"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-youtube text-xs w-full justify-center"

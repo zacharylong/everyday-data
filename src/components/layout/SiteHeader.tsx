@@ -87,7 +87,7 @@ export default function SiteHeader() {
                 </Link>
               ))}
               <a
-                href="https://open.spotify.com/show/everydaydata"
+                href="https://open.spotify.com/show/0YoImym7yRsC6wGDxCrnRQ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-3 btn-primary text-sm py-2 px-4"
