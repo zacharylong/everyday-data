@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-space-grotesk: "Space Grotesk", system-ui, sans-serif;
+    --font-inter: "Inter", system-ui, sans-serif;
+    --font-jetbrains-mono: "JetBrains Mono", monospace;
+  }
+
+  html {
+    @apply bg-midnight text-text-primary scroll-smooth;
+    font-family: var(--font-inter);
+  }
+
+  body {
+    @apply antialiased min-h-screen;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-space-grotesk);
+    @apply font-semibold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-violet text-white;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-cyan rounded-sm;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-midnight;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-2 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-violet-muted;
+  }
+}
+
+@layer components {
+  .btn-platform {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 border;
+  }
+
+  .btn-spotify {
+    @apply btn-platform bg-[#1DB954] border-[#1DB954] text-black hover:bg-[#1ed760] hover:scale-[1.02];
+  }
+
+  .btn-apple {
+    @apply btn-platform bg-surface border-border text-text-primary hover:border-violet hover:bg-surface-2;
+  }
+
+  .btn-youtube {
+    @apply btn-platform bg-[#FF0000] border-[#FF0000] text-white hover:bg-[#cc0000] hover:scale-[1.02];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm bg-violet text-white border border-violet hover:bg-violet-light hover:border-violet-light transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm bg-transparent text-text-primary border border-border hover:border-violet hover:text-white transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-surface border border-border rounded-xl overflow-hidden hover:border-violet/50 transition-all duration-300;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .topic-tag {
+    @apply inline-block px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-violet/10 text-cyan border border-violet/20 hover:bg-violet/20 transition-colors duration-150 cursor-default;
+  }
+
+  .topic-tag-interactive {
+    @apply topic-tag cursor-pointer;
+  }
+
+  .prose-podcast {
+    @apply text-text-secondary leading-relaxed;
+  }
+
+  .prose-podcast h2 {
+    @apply text-text-primary text-xl mt-8 mb-3;
+    font-family: var(--font-space-grotesk);
+  }
+
+  .prose-podcast h3 {
+    @apply text-text-primary text-lg mt-6 mb-2;
+    font-family: var(--font-space-grotesk);
+  }
+
+  .prose-podcast p {
+    @apply mb-4;
+  }
+
+  .prose-podcast a {
+    @apply text-cyan underline underline-offset-2 hover:text-white transition-colors;
+  }
+
+  .prose-podcast strong {
+    @apply text-text-primary font-semibold;
+  }
+
+  .prose-podcast ul {
+    @apply list-disc list-inside space-y-1 mb-4;
+  }
+
+  .gradient-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+
+  .violet-glow {
+    box-shadow: 0 0 40px rgba(87, 6, 140, 0.2);
+  }
+
+  .cyan-glow {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+  }
+}

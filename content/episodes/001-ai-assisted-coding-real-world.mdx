@@ -1,0 +1,114 @@
+---
+id: 1
+slug: "001-ai-assisted-coding-real-world"
+episodeNumber: 1
+title: "AI-Assisted Coding in the Real World"
+subtitle: "What actually changes when developers reach for Copilot, Cursor, and Claude"
+publishedAt: "2024-09-10"
+duration: "48:22"
+guestNames: []
+summaryShort: "Patricia and Zac dig into what AI-assisted coding looks like in practice — beyond the demos. They explore how tools like GitHub Copilot, Cursor, and Claude fit into real workflows, where they genuinely save time, and where they quietly introduce new risks."
+summaryLong: |
+  Everyone's heard the pitch for AI coding assistants. In this episode, Patricia and Zac move past the marketing and into the actual day-to-day experience of using tools like GitHub Copilot, Cursor, and Claude in production environments.
+
+  The conversation covers how experienced engineers are actually integrating these tools — not as replacements, but as amplifiers with specific strengths and specific failure modes. Patricia brings perspective from analytics engineering teams where SQL generation and dbt model drafting have become real productivity levers, while Zac explores what it means for data scientists who write production Python.
+
+  Key themes include: the difference between tools that autocomplete and tools that reason; why code review processes need to evolve when AI is in the loop; how teams handle hallucinated dependencies and confidently wrong suggestions; and the underappreciated skill of writing precise prompts.
+
+  The hosts also discuss the organizational question: what does it mean to be a "good" engineer or analyst when AI handles a larger share of implementation? Spoiler — it shifts the value toward problem framing, architecture, and judgment.
+takeaways:
+  - "AI coding tools work best as accelerators for well-scoped problems, not replacements for problem definition"
+  - "Code review becomes more important, not less, when AI generates more of the first draft"
+  - "Prompt quality is now a core analytical skill — clarity of thought translates directly to output quality"
+  - "SQL and dbt workflows have seen the most immediate practical gains in analytics teams"
+  - "The risk isn't replacement — it's over-trust in confident but wrong suggestions"
+topics:
+  - "AI in Practice"
+  - "Engineering & Resilience"
+  - "Analytics Culture"
+platforms:
+  spotify: "https://open.spotify.com/show/everydaydata"
+  apple: "https://podcasts.apple.com/us/podcast/everyday-data"
+  youtube: "https://youtube.com/@everydatashow"
+coverImage: "/covers/001.jpg"
+featured: true
+startHere: true
+relatedEpisodeIds: [2, 3]
+chapters:
+  - timestamp: "00:00:00"
+    title: "Welcome & what we're covering today"
+  - timestamp: "00:03:15"
+    title: "The gap between AI coding demos and real workflows"
+  - timestamp: "00:10:40"
+    title: "Copilot vs Cursor vs Claude — what each does well"
+  - timestamp: "00:19:55"
+    title: "AI-generated SQL and dbt in analytics teams"
+  - timestamp: "00:27:30"
+    title: "Code review in the age of AI-generated code"
+  - timestamp: "00:34:00"
+    title: "Hallucinations, over-trust, and how teams catch mistakes"
+  - timestamp: "00:40:20"
+    title: "The shifting definition of a skilled engineer or analyst"
+  - timestamp: "00:45:10"
+    title: "Takeaways and what to listen to next"
+resources:
+  - label: "GitHub Copilot"
+    url: "https://github.com/features/copilot"
+    type: "tool"
+  - label: "Cursor"
+    url: "https://cursor.sh"
+    type: "tool"
+  - label: "dbt (data build tool)"
+    url: "https://www.getdbt.com"
+    type: "tool"
+  - label: "A developer's guide to prompt engineering (GitHub Blog)"
+    url: "https://github.blog/developer-skills/github-education/a-beginners-guide-to-prompt-engineering-with-github-copilot/"
+    type: "article"
+seo:
+  metaTitle: "AI-Assisted Coding in the Real World | Everyday Data Ep. 1"
+  metaDescription: "Patricia and Zac explore how AI coding tools like Copilot, Cursor, and Claude fit into real analytics and engineering workflows — and where they fall short."
+---
+
+**Patricia:** Welcome back to Everyday Data. I'm Patricia, and I'm here with Zac, and today we're diving into something that has been in every Slack channel and every engineering retrospective for the past year — AI coding assistants.
+
+**Zac:** Right, and what we want to do today is actually get past the demo reel. Because I think everyone has seen the fifteen-minute YouTube video where someone builds a full web app in an afternoon with AI. That's not really what it looks like when you're doing production work day in and day out.
+
+**Patricia:** Exactly. And I think that's especially true in data roles. The experience of using Copilot as a data analyst or analytics engineer is really different from the experience of a frontend developer building a Todo app.
+
+**Zac:** Let's start there. What does "AI-assisted" actually mean for someone in a data role?
+
+**Patricia:** For me it started with SQL. I was writing some fairly repetitive transformations — window functions, conditional aggregations — and Copilot started finishing my thoughts in ways that were actually useful. Not perfect, but useful as a starting draft.
+
+**Zac:** And that's the key word — draft. The shift I had to make mentally was treating the AI output as a draft that I'm editing, not an answer that I'm approving.
+
+**Patricia:** That mental model matters so much. Because if you're in approval mode, you start missing things. Hallucinated column names. Logic that looks right but doesn't handle nulls correctly. Joins that silently drop rows.
+
+**Zac:** And it happens confidently. That's what makes it tricky. The model doesn't say "I'm not sure about this." It just produces code.
+
+**Patricia:** Which is why I think code review actually gets more important, not less, when AI is in the loop. You're reviewing more code, faster, and some of that code was produced without the author fully reasoning through it step by step.
+
+**Zac:** Let's talk tools for a second. Copilot, Cursor, Claude — they're not the same product. What are the real differences from your experience?
+
+**Patricia:** Copilot is deeply integrated into VS Code and is very good at inline completion. It knows your repo context better than most. But it's reactive — it completes what you started.
+
+**Zac:** Cursor feels more like a collaborator. You can describe what you want in natural language and it'll do a pass on a file or across multiple files. It reasons more. But that also means it makes bigger decisions you have to check.
+
+**Patricia:** Claude — especially in the API or in the Projects feature — is where I go for things that require actual reasoning. Writing a complex data model. Thinking through an architecture decision. Getting an explanation of why something is behaving unexpectedly.
+
+**Zac:** And the skill that no one talks about enough is the quality of the prompt. If you can't describe what you want precisely, you're going to get approximate results.
+
+**Patricia:** That's become a core analytical skill now. It's not just about syntax. It's about being clear enough about your problem that the model can make useful progress on it.
+
+**Zac:** So what does this mean for what it means to be a good engineer or analyst? If the model handles more of the implementation?
+
+**Patricia:** I think it shifts the value up the stack. Understanding the problem deeply. Knowing what architecture makes sense. Reviewing what the model produces critically. Those things matter more.
+
+**Zac:** And honestly, I think that's a reasonable trade. The parts of the work that benefit most from AI are the parts that were often bottlenecks — first drafts, boilerplate, translation of logic into code.
+
+**Patricia:** The parts that need human judgment are still there. They're just more clearly in focus.
+
+**Zac:** Alright — where can people find us if they want to continue the conversation?
+
+**Patricia:** You can find Everyday Data on Spotify, Apple Podcasts, and YouTube. Links in the show notes.
+
+**Zac:** And we'd love to hear what your actual experience has been with AI coding tools. Send us a note. Until next time.

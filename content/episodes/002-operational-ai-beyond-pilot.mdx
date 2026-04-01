@@ -1,0 +1,115 @@
+---
+id: 2
+slug: "002-operational-ai-beyond-pilot"
+episodeNumber: 2
+title: "Operational AI: Getting Beyond the Pilot"
+subtitle: "Why so many AI projects stall at proof-of-concept — and what it takes to actually ship"
+publishedAt: "2024-10-01"
+duration: "52:14"
+guestNames: []
+summaryShort: "Patricia and Zac examine the gap between AI pilots and production deployment. They break down the organizational, technical, and cultural reasons most enterprise AI projects stall, and what the ones that ship actually have in common."
+summaryLong: |
+  The pattern is familiar: a compelling AI pilot. Excited stakeholders. A demo that works. Then... nothing. The project lingers in proof-of-concept purgatory or gets quietly shelved.
+
+  In this episode, Patricia and Zac examine why this happens with such regularity in enterprise settings, and what differentiates the organizations that successfully move AI from experiment to operational capability.
+
+  The conversation draws on patterns from analytics implementations, ML platforms, and AI tooling rollouts. Topics include: the infrastructure gaps that kill momentum after a pilot; the ownership problem (who is accountable for an AI system in production?); the challenge of monitoring models that degrade silently; and why data quality issues that were tolerable in a prototype become fatal in production.
+
+  Patricia and Zac also discuss the organizational dynamics — the difference between a champion-driven pilot and a capability-driven program, and why the former rarely scales. They close with a practical framing: what it looks like to build for operations from the start, not bolt it on after the demo succeeds.
+takeaways:
+  - "Most AI pilots fail to ship because they were designed for demo conditions, not production conditions"
+  - "Operational AI requires ML monitoring, data pipeline reliability, and clear human-in-the-loop protocols"
+  - "Ownership is the most underrated success factor — someone must be accountable for the system in production"
+  - "Data quality issues that are tolerable in a pilot become system failures at scale"
+  - "The organizations that ship AI consistently treat it as infrastructure, not innovation theater"
+topics:
+  - "Operational AI"
+  - "Enterprise Transformation"
+  - "Governance & Trust"
+platforms:
+  spotify: "https://open.spotify.com/show/everydaydata"
+  apple: "https://podcasts.apple.com/us/podcast/everyday-data"
+  youtube: "https://youtube.com/@everydatashow"
+coverImage: "/covers/002.jpg"
+featured: true
+relatedEpisodeIds: [1, 3]
+chapters:
+  - timestamp: "00:00:00"
+    title: "Introduction — the pilot trap"
+  - timestamp: "00:04:00"
+    title: "Why pilots are designed to succeed and production isn't"
+  - timestamp: "00:12:30"
+    title: "The infrastructure gaps: data pipelines, monitoring, compute"
+  - timestamp: "00:21:00"
+    title: "The ownership problem — who is accountable?"
+  - timestamp: "00:28:45"
+    title: "Model drift, silent degradation, and monitoring practices"
+  - timestamp: "00:36:20"
+    title: "Organizational dynamics: champions vs. capabilities"
+  - timestamp: "00:43:10"
+    title: "Building for operations from the start"
+  - timestamp: "00:49:30"
+    title: "Practical takeaways and recommendations"
+resources:
+  - label: "MLflow — open source ML lifecycle management"
+    url: "https://mlflow.org"
+    type: "tool"
+  - label: "Evidently AI — ML monitoring and testing"
+    url: "https://www.evidentlyai.com"
+    type: "tool"
+  - label: "Hidden Technical Debt in Machine Learning Systems (Google)"
+    url: "https://papers.nips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf"
+    type: "article"
+  - label: "The AI Pilot Trap (Harvard Business Review)"
+    url: "https://hbr.org"
+    type: "article"
+seo:
+  metaTitle: "Operational AI: Getting Beyond the Pilot | Everyday Data Ep. 2"
+  metaDescription: "Why do so many enterprise AI projects stall at proof-of-concept? Patricia and Zac break down the organizational and technical gaps that separate pilots from production."
+---
+
+**Patricia:** Today we're talking about something I think every person in enterprise data has either experienced directly or watched happen to a team nearby — the AI pilot that never ships.
+
+**Zac:** The proof-of-concept purgatory.
+
+**Patricia:** Exactly. You do the pilot. It works. People are excited. The demo goes great. And then six months later you're asking what happened to that project and no one really has a clean answer.
+
+**Zac:** And I think the first thing we need to name is that this isn't a technology problem. The models work. The use case is real. Something in the translation from experiment to production keeps breaking.
+
+**Patricia:** Let's start with how pilots are typically designed, because I think that's where the gap originates. When you're running a pilot, you're optimizing for learning and for demonstrating value. You're not optimizing for reliability.
+
+**Zac:** Right. You pick a slice of clean data. You define the scope tightly. You have someone very capable running things by hand. The conditions are ideal.
+
+**Patricia:** And then production is... none of that. Data is messy. The scope expands. The capable person who ran the pilot has moved on. And now you need the system to work unsupervised, reliably, every day.
+
+**Zac:** Infrastructure is one of the first things that breaks. What's the data pipeline that keeps this system fed with fresh, quality data? In a pilot, maybe someone was manually refreshing a CSV. That doesn't work in production.
+
+**Patricia:** And then monitoring. How do you know if the model is degrading? How do you know if the outputs are drifting from what you'd expect? In a pilot, a person is looking at results carefully. In production, you need automated signals.
+
+**Zac:** The ownership question is the one that I think gets underappreciated the most. Who is accountable when the AI system produces a wrong answer at 2am on a Tuesday?
+
+**Patricia:** In so many organizations, that question doesn't have a clean answer. The data science team built it. The engineering team deployed it. The business team uses it. Nobody owns it.
+
+**Zac:** And that diffusion of ownership is lethal for operational systems. Somebody has to be on the hook.
+
+**Patricia:** I've seen organizations where they actually created explicit ML system owners — people whose job description includes being accountable for specific models in production. And those are the organizations where things actually stay working.
+
+**Zac:** Let's talk about what the organizations that do ship AI consistently have in common. Because they exist. This isn't impossible.
+
+**Patricia:** The pattern I see is that they treat AI as infrastructure, not as innovation theater. They're not chasing the demo. They're asking from the beginning: what does it take to run this reliably for two years?
+
+**Zac:** That question changes a lot of decisions. It changes what you build the first version on. It changes what monitoring you put in place. It changes how you structure the team.
+
+**Patricia:** And it changes how you talk to stakeholders. Instead of "here's what AI can do," the conversation is "here's what it takes to make this operational, and here's what we need from the business side to get there."
+
+**Zac:** That's a harder conversation. But it's the right one.
+
+**Patricia:** The organizations that skip that conversation are the ones who end up with beautiful pilots and no operational capability.
+
+**Zac:** Alright — practical recommendations. If someone is sitting in a meeting right now planning an AI pilot, what's the most important thing to do differently?
+
+**Patricia:** Define what "operational" looks like before you start the pilot. What's the data pipeline? Who owns it? How will you monitor it? If you can't answer those questions, you're not ready to pilot.
+
+**Zac:** And if you're already in purgatory with a pilot that worked and now isn't going anywhere — find out who owns it. If the answer is unclear, that's your problem to solve before anything technical.
+
+**Patricia:** Well said. Thanks everyone for listening. Find us on Spotify, Apple Podcasts, and YouTube.
