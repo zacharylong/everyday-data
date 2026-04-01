@@ -14,7 +14,7 @@ export default function LatestEpisodes({ youtubeVideos }: LatestEpisodesProps) {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
           <div>
             <p className="font-mono text-xs text-cyan tracking-widest uppercase mb-3">
-              Fresh off the feed
+              Start here
             </p>
             <h2
               id="latest-heading"

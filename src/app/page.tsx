@@ -1,21 +1,16 @@
-import { getFeaturedEpisodes } from "@/lib/episodes";
 import { fetchYouTubePlaylist, EVERYDAY_DATA_PLAYLIST_ID } from "@/lib/youtube";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
-import FeaturedEpisodes from "@/components/home/FeaturedEpisodes";
+import LatestEpisodes from "@/components/home/LatestEpisodes";
 import TopicPillars from "@/components/home/TopicPillars";
 import WhyListen from "@/components/home/WhyListen";
 import HostCards from "@/components/home/HostCards";
-import LatestEpisodes from "@/components/home/LatestEpisodes";
 import HomeCTA from "@/components/home/HomeCTA";
 import JsonLd from "@/components/ui/JsonLd";
 import { SITE_URL } from "@/lib/basePath";
 
 export default async function HomePage() {
-  const [featured, youtubeEpisodes] = await Promise.all([
-    getFeaturedEpisodes(3),
-    fetchYouTubePlaylist(EVERYDAY_DATA_PLAYLIST_ID, 3),
-  ]);
+  const youtubeEpisodes = await fetchYouTubePlaylist(EVERYDAY_DATA_PLAYLIST_ID, 6);
 
   const podcastSchema = {
     "@context": "https://schema.org",
@@ -41,11 +36,10 @@ export default async function HomePage() {
       <JsonLd data={podcastSchema} />
       <HeroSection />
       <AboutSection />
-      <FeaturedEpisodes episodes={featured} />
+      <LatestEpisodes youtubeVideos={youtubeEpisodes} />
       <TopicPillars />
       <WhyListen />
       <HostCards />
-      <LatestEpisodes youtubeVideos={youtubeEpisodes} />
       <HomeCTA />
     </>
   );
