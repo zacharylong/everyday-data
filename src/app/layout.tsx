@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   description:
     "A podcast about data, AI, and how teams make them useful. Hosted by Patricia and Zac — NYU Stern MS in Business Analytics & AI alumni.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://everydaydata.show"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://everydaydata.show"
   ),
   openGraph: {
     type: "website",
