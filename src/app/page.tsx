@@ -1,4 +1,4 @@
-import { getAllEpisodeCards, getFeaturedEpisodes } from "@/lib/episodes";
+import { getFeaturedEpisodes } from "@/lib/episodes";
 import { fetchYouTubePlaylist, EVERYDAY_DATA_PLAYLIST_ID } from "@/lib/youtube";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";

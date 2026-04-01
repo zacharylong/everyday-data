@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { YouTubeVideo } from "@/lib/youtube";
 import { formatDate } from "@/lib/utils";
 
